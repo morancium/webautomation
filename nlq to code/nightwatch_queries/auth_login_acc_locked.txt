@@ -1,0 +1,8 @@
+Steps for Login test when account is locked:
+1. Before the test execution begins, navigate to 'https://www.bstackdemo.com'
+2. Click on the button with value "signin"
+3. Set username to locked_user
+4. Set password to testingisfun99
+5. Click on the button with value "login"
+6. Get error message as "Your account has been locked."
+7. Terminate the current browser session after the test session

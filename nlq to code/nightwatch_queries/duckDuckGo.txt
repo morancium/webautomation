@@ -1,0 +1,9 @@
+Steps for duckduckgo:
+1. Check whether the tag is "end-to-end'
+2. Navigate to the website "https://duckduckgo.com"
+3. Wait till the body element is visible
+4. Assert whether the search bar is visible
+5. Enter the text "Nightwatch.js" in the search bar
+6. Assert whether the submit button is visible
+7. Click on the button with value "Submit"
+8. Assert that the results contain results about "Nightwatch.js"

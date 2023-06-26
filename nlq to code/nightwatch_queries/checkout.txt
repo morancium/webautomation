@@ -1,0 +1,20 @@
+Steps for checkout test of products:
+1. Before the test execution begins, navigate to 'https://www.bstackdemo.com'
+2. Assert whether the title of homepage is "StackDemo"
+3. Click on the "Google" value from the list of available filters
+4. Assert whether the selected filter has value "Google"
+5. Click on item number 17 on shelf
+6. Click on item number 18 on shelf
+7. Assert whether we have selected 2 elements from shelf
+8. Click on the button with value "buy"
+9. Enter the text "demouser" in the username input field
+10. Enter the text "testingisfun99" in the password input field
+11. Click on the button with value "login"
+11. Enter the text "John" in the first name input field
+12. Enter the text "Doe" in the last name input field
+13. Enter the text "localhost" in the address line 1 input field
+14. Enter the text "local" in the province input field
+15. Enter the text "127001" in the post code input field
+16. Click on the button with value "continue"
+17. Assert whether the confirmation message has value "Your Order has been successfully placed."
+18. Terminate the current browser session after the test session

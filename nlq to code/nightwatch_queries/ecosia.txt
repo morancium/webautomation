@@ -1,0 +1,10 @@
+Steps for ecosia test:
+1. Before the test execution begins, navigate to "https://www.ecosia.org/"
+2. Wait till the body element is visible
+3. Assert that the title text is "Ecosia"
+4. Assert whether the search bar is visible
+5. Enter the text "nighwatch" in the search bar
+6. Assert that the submit button is visible
+7. Click on the button with value "Submit"
+8. Assert that the layout contains "Nightwatch.js"
+9.  Terminate the current browser session after the test execution

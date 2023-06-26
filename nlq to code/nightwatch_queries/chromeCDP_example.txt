@@ -1,0 +1,6 @@
+Steps for chrome dev tools:
+1. Disable the test if the environment variable env is not set to chrome
+2. Wait till the browser navigates to "https://nightwatchjs.org"
+3. Capture a DOM snapshot using the Chrome DevTools Protocol (CDP) command
+4. Pass empty value to computedStyles argument
+5. Assert that the keys of captured DOM snapshot are equal to ['documents', 'strings']

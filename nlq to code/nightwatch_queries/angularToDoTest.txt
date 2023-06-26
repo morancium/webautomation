@@ -1,0 +1,5 @@
+Steps for adding to do list in angular js homepage using custom commands:
+1. Navigate to the website "https://angularjs.org".
+2. Add the additional option "what is nightwatch?" in the to do list
+3. Click on the button with the value "add"
+4. Retrieve the elements in the to-do list
