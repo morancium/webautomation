@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import bs4
 import json
 url = "https://nightwatchjs.org/guide/writing-tests/introduction.html"
 base="https://nightwatchjs.org"
@@ -15,26 +16,25 @@ for i, m in enumerate(tags[0].find_all("a",href=True)):
         # print(m.text)
         title.append(m.text)
         urls.append(base+m["href"])
-print(urls)
-print(title)
+# print(urls)
+# print(title)
 
 Meta_texts=[]
 Meta_json=[]
 for i, url in enumerate(urls):
+    print(url)
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "lxml")
     texts=soup.find_all("div",class_="page-content")
-    body=texts[0].text
-    body=body.replace('\n','')
-    body=body.replace('\u2018','\'')
-    body=body.replace('\u2019','\'')
-    body=body.replace('\t','')
-    Meta_json.append({
-        "title":title[i],
-        "body":body,
-        "url":url
-    })
-    Meta_texts.append(body)
+    for x in texts[0]:
+        if(isinstance(x, bs4.element.Tag)):
+            # print(x.css.select("div , .sample-test"))
+            # print(x)
+            # break
+            if (len(x.css.select("div.sample-test"))!=0):
+                for xx in (x.css.select("div.sample-test")):
+                    print(xx.text)
+    break
 
 json_data = json.dumps(Meta_json, indent=4)
 with open('scraping\write_test.json', 'w') as outfile:
